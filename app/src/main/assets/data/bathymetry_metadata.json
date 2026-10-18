@@ -1,0 +1,24 @@
+{
+  "global": {
+    "file": "global_depth_1deg.f32",
+    "width": 360,
+    "height": 144,
+    "lon0": -179.5,
+    "lat0": -71.5,
+    "dlon": 1.0,
+    "dlat": 1.0,
+    "units": "water depth positive; land negative",
+    "source": "original global_bathy.nc, bilinear resampling from 0.25 degree to 1 degree"
+  },
+  "nwpac": {
+    "file": "nwpac_depth_025deg.f32",
+    "width": 321,
+    "height": 241,
+    "lon0": 100.0,
+    "lat0": 0.0,
+    "dlon": 0.25,
+    "dlat": 0.25,
+    "units": "water depth positive; land negative",
+    "source": "original GMRT nwpac_bathy.nc, orientation corrected using land/deep-ocean control points and resampled to 0.25 degree"
+  }
+}
