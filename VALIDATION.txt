@@ -1,0 +1,16 @@
+Global Tsunami Simulator Android — Validation Status
+
+Core numerical regression
+- Original Python SWE reference: pass. Fixed Japan trench source / bundled 0.25 degree NWPAC bathymetry; after 100 steps, eta at lat 38.75, lon 141.75 matches the reference within 2e-5 m (water-grid max discrepancy observed in direct parity test: about 1.2e-6 m).
+- 0.25 degree NWPAC simulation: pass, Mw 8.8 benchmark, 6 simulated hours, 1,109 time steps; all checked state values finite; coastal records generated from computed water levels.
+- 1 degree global simulation: pass, 60 minute smoke test; all checked state values finite.
+- 24 hour NWPAC maximum-duration run: pass, 4,433 time steps; no non-finite water level observed.
+- Java core compiles with javac; Android Java files also passed a source/API-shape compile using temporary Android framework stubs.
+- HTML/JavaScript passes Node syntax parsing.
+
+APK build status
+- No APK was produced in this environment. Android SDK/platform android.jar and Gradle are not installed, and external package/download hosts cannot be resolved from this container.
+- The temporary Android stubs are verification-only and are not included in this project. A real Android SDK build is still required to create app-debug.apk.
+
+Scientific scope
+- This is a numerical learning/research port of the original linear shallow-water model, using resampled global (1 degree) and Northwest Pacific (0.25 degree) bathymetry. The fault source is an approximation. It does not model inundation/run-up or replace official tsunami warning services.
